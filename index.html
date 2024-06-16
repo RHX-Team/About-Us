@@ -15,8 +15,8 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            background-color: #f0f0f0;
-            color: #333;
+            background-color: #00a651; /* Background color is green */
+            color: #fff; /* Text color is white */
         }
         .navbar {
             display: flex;
@@ -42,13 +42,14 @@
             color: #00a651;
         }
         .card {
-            background: #fff;
+            background: #004d26; /* Dark green tone */
             padding: 40px;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            max-width: 800px;
+            width: 90%; /* Slightly wider */
+            max-width: 900px; /* Slightly wider */
             text-align: center;
+            color: #fff; /* Ensure text inside card is readable */
             animation: slideInLeft 0.5s forwards;
         }
         @keyframes slideInLeft {
@@ -120,6 +121,7 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             width: 250px;
             text-align: center;
+            color: #333; /* Ensure text inside card is readable */
         }
         .developer-card img {
             border-radius: 50%;
@@ -169,15 +171,15 @@
 
     <div class="card">
         <h1>Riley Hub X</h1>
-        <p>Welcome To Riley Hub X A Team Of Developers And We Makes Various Script For Games</p>
+        <p>Welcome To Riley Hub X, A Team Of Developers And We Create Scripts For Various Games That Riley Hub X Can Support</p>
         <div class="button-container">
-            <a href="download.html">Download</a>
-            <a href="?.html">?</a>
+            <a href="https://discord.gg/pDq2Cgxh6H">Join Our Discord</a>
+            <a href="Download.html">Roblox Executor</a>
         </div>
     </div>
 
     <div class="marquee">
-        <marquee>Stay tuned for our latest updates and features!</marquee>
+        <marquee>Join Our Discord To Be Updated About Riley Hub X!</marquee>
     </div>
 
     <div class="developer-team">
@@ -185,30 +187,29 @@
         <div class="cards">
             <!-- Example Developer Card -->
             <div class="developer-card">
-                <img src="profile1.jpg" alt="Developer 1">
-                <h3>Developer 1</h3>
-                <p>Frontend Developer</p>
+                <img src="https://cdn.discordapp.com/attachments/1251015431855145021/1251798668952998008/rhx.png?ex=666fe3db&is=666e925b&hm=8fd02b463f6787255bea457a1a341ca89bc5d6a82c7d6a2c36945a98132a470e&" alt="Developer 1">
+                <h3>RileyBeeRBLX</h3>
+                <p>CEO/Founder / Developer</p>
                 <div class="button-container">
-                    <a href="https://github.com/developer1" target="_blank">GitHub</a>
-                    <a href="https://youtube.com/developer1" target="_blank">YouTube</a>
+                    <a href="https://github.com/rileybeeorion" target="_blank">GitHub</a>
+                    <a href="https://youtube.com/@rileybeeorion" target="_blank">YouTube</a>
                 </div>
             </div>
-            <!-- Add more developer cards as needed -->
+            <div class="developer-card">
+                <img src="https://cdn.discordapp.com/attachments/1251015431855145021/1251798668952998008/rhx.png?ex=666fe3db&is=666e925b&hm=8fd02b463f6787255bea457a1a341ca89bc5d6a82c7d6a2c36945a98132a470e&" alt="Developer 1">
+                <h3>x2-Neptune</h3>
+                <p>CEO/Founder Of Alchemy Hub / Developer</p>
+                <div class="button-container">
+                    <a href="https://github.com/x2-Neptune" target="_blank">GitHub</a>
+                    <a href="https://youtube.com/@alchemyhub" target="_blank">YouTube</a>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="footer">
-        &copy; 2024 RHX. All rights reserved.
+        &copy; RileyBeeOrion © 2024 RHX Team
     </div>
-
-    <div class="extra-content">
-        <img src="your-image.jpg" alt="Extra Image">
-        <div class="button-container">
-            <a href="https://discord.com" target="_blank">Join The Discord</a>
-            <a href="roblox-executor.html">Roblox Executor</a>
-        </div>
-    </div>
-
     <script>
         window.onload = function() {
             const username = localStorage.getItem('username');
