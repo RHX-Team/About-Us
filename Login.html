@@ -16,6 +16,16 @@
             min-height: 100vh;
             background-color: #00a651;
             color: #fff;
+            overflow: hidden;
+            animation: slideIn 0.5s forwards;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
         }
         .login-container {
             text-align: center;
@@ -73,6 +83,18 @@
         .notification.show {
             top: 20px;
         }
+        .register-link {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        .register-link a {
+            color: #00ff85;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .register-link a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -81,6 +103,9 @@
         <input type="text" id="username" class="input-field" placeholder="Username" required>
         <input type="password" id="password" class="input-field" placeholder="Password" required>
         <button class="login-button" onclick="login()">Login</button>
+        <div class="register-link">
+            Don't have an account? <a href="Register.html">Create Here</a>
+        </div>
     </div>
     <div id="notification" class="notification"></div>
     <script>
