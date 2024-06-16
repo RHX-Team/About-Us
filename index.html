@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riley Hub X</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #f0f0f0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            width: 300px;
+            opacity: 0;
+            transform: translateX(-100%);
+            animation: slide-in 1s forwards;
+        }
+        .card img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        .card h1 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .card h1 span {
+            color: purple;
+        }
+        .card p {
+            font-size: 14px;
+            color: #666;
+            margin: 5px 0;
+        }
+        .card .emoji {
+            font-size: 24px;
+        }
+        .card .buttons a {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(45deg, #ff00cc, #3333ff);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        @keyframes slide-in {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://cdn.discordapp.com/attachments/1251015431855145021/1251435886525288468/47450058-5C55-4983-88D5-F56DBA115754.jpg?ex=666e91fd&is=666d407d&hm=069ebf11438c5b2599c4d24a818c2c2004e0d78d1ec6e43e4abd81d5972ff6f1&" alt="Profile Picture">
+        <h1>Hello, Welcome To <span>Riley Hub X</span> <span class="emoji">👋</span></h1>
+        <p>We Develop Scripts And Programming Stuff</p>
+        <div class="buttons">
+            <a href="https://discord.gg/vH28S9c2kB" target="_blank">Join Our Discord Server⭐️</a>
+        </div>
+    </div>
+</body>
+</html>
