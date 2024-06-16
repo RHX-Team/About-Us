@@ -3,74 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riley Hub X</title>
+    <title>RHX Team</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
-            background: #f0f0f0;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
+            padding: 0;
+            background-color: #00a651;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
         }
-        .card {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        header {
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #007f39;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        header nav {
+            display: flex;
+            gap: 15px;
+        }
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 400;
+            padding: 10px 20px;
+            border: 1px solid #00ff85;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+        header nav a:hover {
+            background: #00ff85;
+            color: #007f39;
+        }
+        .container {
+            max-width: 1000px;
+            margin-top: 100px;
+            text-align: left;
+            padding: 0 20px;
+        }
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .buttons a {
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background 0.3s;
+            font-weight: 600;
+        }
+        .buttons a.join-discord {
+            background: transparent;
+            border: 2px solid #00ff85;
+            color: #00ff85;
+        }
+        .buttons a.join-discord:hover {
+            background: #00ff85;
+            color: #007f39;
+        }
+        .buttons a.roblox-executor {
+            background: #00ff85;
+            color: #007f39;
+            border: 2px solid #00ff85;
+        }
+        .buttons a.roblox-executor:hover {
+            background: #00ff85;
+            color: #007f39;
+        }
+        .image-container {
             text-align: center;
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 100%;
+            max-width: 400px;
+        }
+        .footer {
+            font-size: 14px;
+            color: #ddd;
+            text-align: left;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .scroll-down {
+            position: absolute;
+            bottom: 60px;
+            font-size: 16px;
+        }
+        .scroll-down img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+        }
+        .developer-team {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .developer-team h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .profile-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .profile-card {
+            background: #007f39;
+            border: 2px solid #00ff85;
+            border-radius: 10px;
             padding: 20px;
             width: 300px;
-            opacity: 0;
-            transform: translateX(-100%);
-            animation: slide-in 1s forwards;
+            text-align: center;
         }
-        .card img {
+        .profile-card img {
             border-radius: 50%;
             width: 100px;
             height: 100px;
+            object-fit: cover;
+            margin-bottom: 15px;
         }
-        .card h1 {
-            font-size: 24px;
+        .profile-card h4 {
+            font-size: 20px;
             margin: 10px 0;
+            font-weight: 600;
         }
-        .card h1 span {
-            color: purple;
-        }
-        .card p {
+        .profile-card p {
             font-size: 14px;
-            color: #666;
-            margin: 5px 0;
+            margin-bottom: 15px;
+            font-weight: 400;
         }
-        .card .emoji {
-            font-size: 24px;
+        .profile-card .profile-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
         }
-        .card .buttons a {
-            display: inline-block;
-            margin: 10px 0;
+        .profile-card .profile-buttons a {
             padding: 10px 20px;
-            border-radius: 20px;
+            border-radius: 5px;
             text-decoration: none;
-            color: white;
-            background: linear-gradient(45deg, #ff00cc, #3333ff);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.3s;
+            color: #fff;
+            border: 1px solid #00ff85;
         }
-        @keyframes slide-in {
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+        .profile-card .profile-buttons a.github {
+            background: #333;
+        }
+        .profile-card .profile-buttons a.github:hover {
+            background: #00ff85;
+            color: #007f39;
+        }
+        .profile-card .profile-buttons a.youtube {
+            background: #c4302b;
+        }
+        .profile-card .profile-buttons a.youtube:hover {
+            background: #00ff85;
+            color: #007f39;
         }
     </style>
 </head>
 <body>
-    <div class="card">
-        <img src="https://cdn.discordapp.com/attachments/1251015431855145021/1251435886525288468/47450058-5C55-4983-88D5-F56DBA115754.jpg?ex=666e91fd&is=666d407d&hm=069ebf11438c5b2599c4d24a818c2c2004e0d78d1ec6e43e4abd81d5972ff6f1&" alt="Profile Picture">
-        <h1>Hello, Welcome To <span>Riley Hub X</span> <span class="emoji">👋</span></h1>
-        <p>We Develop Scripts And Programming Stuff</p>
+    <header>
+        <h1>Riley Hub X</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Login</a>
+            <a href="#">Code</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Riley Hub X</h2>
+        <p>Welcome To Riley Hub X, RHX Team Makes Various Script And We Have Many Developers And We Make Supported Games For Riley Hub X,</p>
         <div class="buttons">
-            <a href="https://discord.gg/vH28S9c2kB" target="_blank">Join Our Discord Server⭐️</a>
+            <a href="download.html" class="join-discord">Join Discord</a>
+            <a href="download.html" class="roblox-executor">Roblox Executor</a>
+        </div>
+        <div class="footer">
+            RileyBeeOrion © 2024 RHX Team
+        </div>
+        <div class="footer">
+            All Credits To Alchemy Hub This Is Made By RileyBeeOrion
+        </div>
+        <div class="image-container">
+            <img src="https://cdn.discordapp.com/attachments/1251015431855145021/1251798668952998008/rhx.png?ex=666fe3db&is=666e925b&hm=8fd02b463f6787255bea457a1a341ca89bc5d6a82c7d6a2c36945a98132a470e&" alt="RHX Team Photo">
+        </div>
+    </div>
+    <div class="developer-team">
+        <h3>Developer Team</h3>
+        <div class="profile-cards">
+            <!-- Repeat this block for each developer -->
+            <div class="profile-card">
+                <img src="https://cdn.discordapp.com/attachments/1251015431855145021/1251798668952998008/rhx.png?ex=666fe3db&is=666e925b&hm=8fd02b463f6787255bea457a1a341ca89bc5d6a82c7d6a2c36945a98132a470e&" alt="Developer Name">
+                <h4>RileyBeeOrion</h4>
+                <p>CEO/Founder / Developer,</p>
+                <div class="profile-buttons">
+                    <a href="https://github.com/developer_profile" class="github">GitHub</a>
+                    <a href="https://youtube.com/developer_channel" class="youtube">YouTube</a>
+                </div>
+            </div>
+            <!-- Add more profile cards as needed -->
         </div>
     </div>
 </body>
