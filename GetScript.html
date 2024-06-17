@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RHX Get Script</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;600&display=swap');
+
         body {
             margin: 0;
             font-family: 'Lexend Deca', sans-serif;
@@ -69,7 +71,7 @@
             margin-left: 10px;
             font-size: 1em;
             color: #00ff00;
-            background-color: 	#000000;
+            background-color: #000000;
             border: 2px solid #00ff00;
             border-radius: 5px;
             cursor: pointer;
@@ -77,6 +79,29 @@
         }
 
         .copy-btn:hover {
+            background-color: #00ff00;
+            color: #000;
+        }
+
+        .return-home {
+            margin-top: 20px;
+            font-size: 1em;
+            color: #333;
+        }
+
+        .return-home button {
+            font-size: 1em;
+            color: #00ff00;
+            background-color: #000000;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            margin-left: 5px;
+        }
+
+        .return-home button:hover {
             background-color: #00ff00;
             color: #000;
         }
@@ -94,6 +119,9 @@
         <div class="textbox-container">
             <textarea class="textbox" id="scriptTextbox" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/RHX-Team/Riley-Hub-X/main/Loader.lua"))()</textarea>
             <button class="copy-btn" onclick="copyToClipboard()">Copy</button>
+        </div>
+        <div class="return-home">
+            Return to the Home Page <button onclick="window.location.href='index.html'">Here</button>
         </div>
     </div>
 
